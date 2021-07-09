@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <ul class="nav navbar-nav navbar-middle">
+    <h1>Hello, {{ user.username }}</h1>
+    <hr>
+    {% for post in posts %}
+    <p>
+        {{ post.author.username }} says: <b>{{ post.body }}</b
+    </p>
+    {% endfor %}
+{% endblock %}
